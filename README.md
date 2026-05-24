@@ -1,4 +1,4 @@
-# 🎮 Unity Top-Down Shooter Core
+# Unity Top-Down Shooter Core
 
 A 2D top-down shooter built with Unity as part of a structured game development learning roadmap.
 
@@ -6,7 +6,7 @@ A 2D top-down shooter built with Unity as part of a structured game development 
 ![Platform](https://img.shields.io/badge/Platform-PC-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-## ✨ Features
+## Features
 
 - **Player Movement** - WASD ile 8 yönlü hareket (Rigidbody2D, New Input System)
 - **Mouse Aim** - Mouse yönüne bakan karakter (Atan2 açı hesabı)
@@ -15,7 +15,7 @@ A 2D top-down shooter built with Unity as part of a structured game development 
 - **Enemy Spawner** - Spawn noktalarından otomatik düşman üretimi
 - **Wave System** - Wave bazlı düşman sistemi, wave bitince yenisi başlar
 
-## 🎮 Controls
+## Controls
 
 | Tuş | Aksiyon |
 |-----|---------|
@@ -23,14 +23,19 @@ A 2D top-down shooter built with Unity as part of a structured game development 
 | Mouse | Nişan al |
 | Sol Tık | Ateş et |
 
-## 🛠️ Technical Details
+## Technical Details
 
 - **Engine:** Unity 6
 - **Language:** C#
 - **Input:** Unity New Input System
-- **Physics:*
+- **Physics:** Rigidbody2D, Gravity Scale 0
 
-cd /Users/ozgur/unity-top-down-shooter-core
-git add .
-git commit -m "Add README"
-git push
+## Development Timeline
+
+| Hafta | Milestone |
+|-------|-----------|
+| Mayıs 2026 - Hafta 1 | Movement, Aim, Shoot, Enemy, Spawn, Wave |
+
+---
+
+Made with Unity
