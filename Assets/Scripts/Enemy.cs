@@ -29,7 +29,20 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             WaveManager.Instance.OnEnemyDied();
+            ScoreManager.Instance.AddScore(1);
             Destroy(gameObject);
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(1);
+            }
+        }
+    } 
 }
