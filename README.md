@@ -14,6 +14,10 @@ A 2D top-down shooter built with Unity as part of a structured game development 
 - **Enemy AI** - Player'a doğru hareket eden düşmanlar
 - **Enemy Spawner** - Spawn noktalarından otomatik düşman üretimi
 - **Wave System** - Wave bazlı düşman sistemi, wave bitince yenisi başlar
+- **Player Health** - Can sistemi, hasar alma, invincibility frames
+- **Damage Feedback** - Hasar alınca sprite flash efekti
+- **Game Over** - Player ölünce Game Over ekranı, restart butonu
+- **Score System** - Enemy öldürünce score artışı, UI'da görünür
 
 ## Controls
 
@@ -32,9 +36,10 @@ A 2D top-down shooter built with Unity as part of a structured game development 
 
 ## Development Timeline
 
-| Hafta | Milestone |
-|-------|-----------|
-| Mayıs 2026 - Hafta 1 | Movement, Aim, Shoot, Enemy, Spawn, Wave |
+| Versiyon | Tarih | Milestone |
+|----------|-------|-----------|
+| v0.1.0 | Mayıs 2026 - Hafta 1 | Movement, Aim, Shoot, Enemy, Spawn, Wave |
+| v0.2.0 | Mayıs 2026 - Hafta 2 | Health, Damage Feedback, Game Over, Score |
 
 ---
 
