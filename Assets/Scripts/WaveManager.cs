@@ -23,7 +23,7 @@ public class WaveManager : MonoBehaviour
         StartWave();
     }
 
-    void StartWave()
+    public void StartWave()
     {
         currentWave++;
         enemiesSpawned = 0;
@@ -49,7 +49,7 @@ public class WaveManager : MonoBehaviour
         enemiesAlive--;
         if (enemiesAlive <= 0 && enemiesSpawned >= enemiesPerWave)
         {
-            StartWave();
+            UpgradeManager.Instance.ShowUpgradePanel();
         }
     }
 }

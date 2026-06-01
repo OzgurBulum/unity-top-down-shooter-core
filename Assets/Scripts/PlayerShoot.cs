@@ -7,6 +7,7 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] private float bulletSpeed = 10f;
     [SerializeField] private Transform firePoint;
     private PlayerControls controls;
+    private float lastFireTime = 0f;
 
     void Awake()
     {
@@ -27,8 +28,20 @@ public class PlayerShoot : MonoBehaviour
 
     private void OnShootPerformed(InputAction.CallbackContext ctx)
     {
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        rb.linearVelocity = firePoint.up * bulletSpeed;
+        // TODO: Time.time ile lastFireTime arasındaki fark
+        float timeSinceLastFire = Time.time - lastFireTime;
+        // PlayerStats.Instance.fireRate'den büyükse ateş et
+        if (timeSinceLastFire >= PlayerStats.Instance.fireRate)
+        {
+            // TODO: bullet oluştur
+            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            // TODO: bullet'a velocity ver
+            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            rb.linearVelocity = firePoint.up * bulletSpeed;
+            // TODO: bullet'a damage değerini PlayerStats'tan ver
+            bullet.GetComponent<Bullet>().damage = PlayerStats.Instance.bulletDamage;
+            // TODO: lastFireTime'ı güncelle
+            lastFireTime = Time.time;
+        } 
     }
 }

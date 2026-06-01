@@ -3,6 +3,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [SerializeField] private float lifetime = 3f;
+    public int damage = 1;
 
     void Start()
     {
@@ -14,7 +15,7 @@ public class Bullet : MonoBehaviour
         Enemy enemy = other.GetComponent<Enemy>();
         if (enemy != null)
         {
-            enemy.TakeDamage(1);
+            enemy.TakeDamage(damage);
             Destroy(gameObject);
         }
     }
