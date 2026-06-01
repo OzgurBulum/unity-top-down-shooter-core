@@ -20,7 +20,6 @@ A 2D top-down shooter built with Unity as part of a structured game development 
 - **Score System** - Enemy öldürünce score artışı, UI'da görünür
 - **Upgrade System** - Wave sonrası Fire Rate, Damage, Speed upgrade seçimi
 - **Player Stats** - Merkezi stat yönetimi (moveSpeed, fireRate, bulletDamage)
-
 ## Controls
 
 | Tuş | Aksiyon |
@@ -42,7 +41,6 @@ A 2D top-down shooter built with Unity as part of a structured game development 
 |----------|-------|-----------|
 | v0.1.0 | Mayıs 2026 - Hafta 1 | Movement, Aim, Shoot, Enemy, Spawn, Wave |
 | v0.2.0 | Mayıs 2026 - Hafta 2 | Health, Damage Feedback, Game Over, Score |
-| v0.3.0 | Mayıs 2026 - Hafta 3 | Power-ups, Upgrade UI, Wave Progression |
 
 ---
 
