@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private PlayerControls controls;
+    [SerializeField] private Joystick joystick;
 
     void Awake()
     {
@@ -39,7 +40,13 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.linearVelocity = moveInput * PlayerStats.Instance.moveSpeed;
+        Vector2 input = moveInput;
+
+        if (joystick != null && joystick.InputValue.magnitude > 0.1f)
+        {
+            input = joystick.InputValue;
+        }
+        rb.linearVelocity = input * PlayerStats.Instance.moveSpeed;
     }
 
 }

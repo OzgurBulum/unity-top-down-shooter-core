@@ -44,4 +44,18 @@ public class PlayerShoot : MonoBehaviour
             lastFireTime = Time.time;
         } 
     }
+
+    public void OnFireButtonPressed()
+    {
+        float timeSinceLastFire = Time.time - lastFireTime;
+        if (timeSinceLastFire >= PlayerStats.Instance.fireRate)
+        {
+            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            rb.linearVelocity = firePoint.up * bulletSpeed;
+            bullet.GetComponent<Bullet>().damage = PlayerStats.Instance.bulletDamage;
+            lastFireTime = Time.time;
+        }
+    }
+
 }
